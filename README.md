@@ -56,3 +56,9 @@ IP扫描就乱写了。里边还有部分代码不合理
 
 蠕虫登陆后![image](https://raw.githubusercontent.com/dongdong1972/Simple-Golang-Worm/master/image/result.PNG)
 ------------
+```
+# 怎么结束呢？
+只要访问不了服务端就没事啦。
+
+已知Bug:
+    1. Server段存在mysql注入,执行处未作任何过滤.
