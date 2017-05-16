@@ -44,5 +44,5 @@ go run main.go func.go
 某个机房，里边默认安装了mssql,并且默认密码都是123456
 IP扫描就乱写了。里边还有部分代码不合理
 
-蠕虫登陆后![image](http://github.com/dongdong1972/Simple-Golang-Worm/raw/master/image/result.PNG)
+蠕虫登陆后![image](https://raw.githubusercontent.com/dongdong1972/Simple-Golang-Worm/master/image/result.PNG)
 ---------
