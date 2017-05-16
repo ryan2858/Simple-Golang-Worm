@@ -1,0 +1,14 @@
+<table border="1">
+    <tr>
+        <th>mac</th>
+        <th>time</th>
+        <th>ip</th>
+    </tr>
+        {% for post in results %}
+    <tr>
+        <td>{{ post[0] }}</td>
+        <td>{{ post[1] }}</td>
+        <td>{{ post[2] }}</td>
+    </tr>
+    {% endfor %}
+</table>
